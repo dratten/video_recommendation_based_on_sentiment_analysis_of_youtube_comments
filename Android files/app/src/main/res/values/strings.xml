@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">FindMyExpert</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="saved_videos">Saved Videos</string>
+    <string name="transcript">Transcript</string>
+    <string name="profile">Profile</string>
+
+    <string-array name="navLabel">
+        <item>Home</item>
+        <item>Search</item>
+        <item>Saved</item>
+        <item>Transcripts</item>
+        <item>Dalton</item>
+    </string-array>
+    <array name="navIcon">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_search</item>
+        <item>@drawable/ic_saved</item>
+        <item>@drawable/ic_transcript</item>
+        <item>@drawable/ic_account</item>
+    </array>
+    <array name="navIconSelected">
+        <item>@drawable/ic_home_selected</item>
+        <item>@drawable/ic_search_selected</item>
+        <item>@drawable/ic_saved_selected</item>
+        <item>@drawable/ic_transcript_selected</item>
+        <item>@drawable/ic_account_selected</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="science_technology"><![CDATA[Science & \n Technology]]></string>
+    <string name="trending_categories">Trending Categories</string>
+    <string name="recently_viewed">Recently Viewed</string>
+    <string name="learn_guitar_chords_3">Learn Guitar: Chords 3</string>
+    <string name="search_any_topic">Search any topic</string>
+    <string name="welcome">Welcome</string>
+    <string name="accuracy">Accuracy:</string>
+    <string name="api_key">AIzaSyBEPVvXxNKEe0o9Bwh_VI152uVdgAGEHAo</string>
+    <string-array name="search_history">
+
+    </string-array>
+</resources>

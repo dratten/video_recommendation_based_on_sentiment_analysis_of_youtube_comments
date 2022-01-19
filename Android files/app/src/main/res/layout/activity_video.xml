@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoActivity"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:background="@color/colorPrimaryDark">
+    <ImageView
+        android:id="@+id/video_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_back"
+        android:padding="15dp"
+        android:clickable="true"
+        android:onClick="back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <fragment
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:id="@+id/video_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_back"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_player"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Video Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/video_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_title"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="TutorialsPoint"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_channel"
+            android:text="@string/accuracy"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/video_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_channel"
+            android:layout_marginStart="65dp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="70%"
+            android:textColor="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/video_title"
+            android:background="@drawable/thumbnail_border"
+            android:backgroundTint="@color/colorSecondary"
+            android:padding="2dp">
+
+            <ImageButton
+                android:id="@+id/video_save"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/video_transcript"
+                android:background="@drawable/rounded_border"
+                android:backgroundTint="@color/colorSecondary"
+                android:onClick="saveVideo"
+                android:src="@drawable/ic_saved_selected" />
+
+            <RelativeLayout
+                android:layout_width="4dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/video_transcript"
+                android:background="@color/colorPrimaryDark" />
+
+            <ImageButton
+                android:id="@+id/video_transcript"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_border"
+                android:backgroundTint="@color/colorSecondary"
+                android:onClick="getTranscript"
+                android:src="@drawable/ic_transcript_selected" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
